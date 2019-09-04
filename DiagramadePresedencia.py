@@ -8,9 +8,11 @@ end_time = ['2019-08-16 0:00', '2019-08-09 5:00', '2019-08-11 0:00', '2019-08-13
 index = ['Timeframe ' + str(i) for i in range(len(start_time))]
 df = pd.DataFrame({'Tiempo Inicio': pd.to_datetime(start_time),
               'Tiempo final' : pd.to_datetime(end_time)}, index=index)
-pesimista = [8, 1, 1, 1, 1,1, 3, 1, 1,1 ,2 ,1 ,1, 1,1, 1, 1, 5, 2, 1 , 3 , 3, 1 , 5 , 3, 26, 8, 8 , 3]
-optimista = [2, 1, 1, 1, 1,1, 1, 1, 1,1 ,2 ,1 ,1, 1, 1, 1, 1, 5, 2, 1 , 3 , 3, 1 , 2 , 1, 10, 5, 5 , 1]
+pesimista = [8,1,1,1,1,1,3,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,5,2,1,3,3,1,5,3,26,8,8,3]
+optimista = [2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,5,2,1,3,3,1,2,1,10,5,5,1]
+probable = [4,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,3,3,15,1,15,8,1,1]
 print(df)
+
 
 #cubo de tiempo 
 rng = pd.date_range('2019-08-08 20:00', periods=1, freq='H')
